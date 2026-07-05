@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - SkyRest</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #1e1b4b 100%);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --accent: #818cf8;
+      --card-bg: rgba(30, 41, 59, 0.45);
+      --card-border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 24px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--accent);
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 20px;
+      color: var(--text-secondary);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      padding: 8px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+    }
+
+    .lang-content {
+      display: none;
+    }
+
+    .lang-content.active {
+      display: block;
+    }
+
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid var(--card-border);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(148, 163, 184, 0.6);
+    }
+  </style>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-content').forEach(content => {
+        content.classList.toggle('active', content.getAttribute('data-lang') === lang);
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">Sky<span>Rest</span></div>
+      <div class="subtitle">Privacy Policy / Политика конфиденциальности / Політика конфіденційності</div>
+    </div>
+
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">English</button>
+      <button class="lang-btn" data-lang="ru" onclick="setLanguage('ru')">Русский</button>
+      <button class="lang-btn" data-lang="ua" onclick="setLanguage('ua')">Українська</button>
+    </div>
+
+    <!-- ENGLISH CONTENT -->
+    <div class="lang-content active" data-lang="en">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: July 03, 2026</p>
+      <p>This Privacy Policy describes how SkyRest ("we", "our", or "us") manages and protects your privacy when you use our mobile application. We are committed to maintaining the confidentiality and safety of your personal information.</p>
+
+      <h2>1. Information We Collect</h2>
+      <p><strong>Personal Data:</strong> SkyRest does NOT collect, store, or transmit any personally identifiable information (such as your name, email address, phone number, or device identifiers).</p>
+      <p><strong>Local Storage:</strong> We use local storage (AsyncStorage) on your device to save your app configurations, such as your current language choice, custom sound mixes created by you, and your PRO activation status. This data stays entirely on your phone and is not sent to any external servers.</p>
+
+      <h2>2. Third-Party Services</h2>
+      <p>To provide all app capabilities (advertisements and in-app billing), we integrate verified third-party SDKs that may collect anonymous device data in accordance with their privacy policies:</p>
+      <ul>
+        <li><strong>Google AdMob:</strong> Sourced to display advertising banners and rewarded ads. Google may use advertising IDs (such as Google Advertising ID or IDFA) to serve personalized or non-personalized ads. You can manage personalization directly in your device system settings or read more in the <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Google Privacy Policy</a>.</li>
+        <li><strong>RevenueCat:</strong> Sourced to manage in-app purchases and subscription checks securely. It processes transaction statuses and anonymized customer IDs. No personal payment credentials (credit cards, bank accounts) are ever processed or accessed by us or RevenueCat. All transactions are securely handled by Google Play Billing or Apple App Store. Read more in the <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent);">RevenueCat Privacy Policy</a>.</li>
+      </ul>
+
+      <h2>3. Children's Privacy</h2>
+      <p>Our application does not knowingly collect personal information from children under the age of 13. Since we do not collect any personal data at all, our application is fully compliant with COPPA (Children's Online Privacy Protection Act).</p>
+
+      <h2>4. Changes to This Policy</h2>
+      <p>We may update our Privacy Policy from time to time. We will notify you of any changes by publishing the updated Privacy Policy on this page.</p>
+
+      <h2>5. Contact Us</h2>
+      <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
+      <p><strong>Email:</strong> skylight.apps.help@gmail.com</p>
+
+      <h2>6. Data Retention and Deletion</h2>
+      <p>We do not store your personal data on our servers, so we have no user data to delete. You can delete all locally stored data (your presets, custom mixes, and settings) at any time by uninstalling the App or clearing the App cache in your device settings. For data collected by third-party SDKs (such as AdMob and RevenueCat), you can request deletion or opt-out by managing your device's advertising identifier settings or contacting the respective third party.</p>
+    </div>
+
+    <!-- RUSSIAN CONTENT -->
+    <div class="lang-content" data-lang="ru">
+      <h1>Политика конфиденциальности</h1>
+      <p>Последнее обновление: 3 июля 2026 г.</p>
+      <p>Настоящая Политика конфиденциальности описывает, как приложение SkyRest («мы», «наш» или «нас») обрабатывает и защищает ваши данные. Мы стремимся обеспечить полную безопасность и конфиденциальность вашей личной информации.</p>
+
+      <h2>1. Сбор информации</h2>
+      <p><strong>Персональные данные:</strong> SkyRest НЕ собирает, не хранит и не передает третьим лицам какую-либо личную информацию (например, ваше имя, адрес электронной почты, номер телефона или идентификаторы устройства).</p>
+      <p><strong>Локальное хранилище:</strong> Мы используем локальную память вашего устройства (AsyncStorage) исключительно для сохранения настроек приложения, таких как выбранный язык интерфейса, созданные вами пользовательские миксы звуков и статус активации PRO. Эти данные хранятся только на вашем телефоне и никогда не передаются на внешние серверы.</p>
+
+      <h2>2. Сторонние сервисы</h2>
+      <p>Для обеспечения работы рекламных объявлений и встроенных покупок мы используем проверенные сторонние инструменты (SDK), которые могут собирать анонимные технические данные в соответствии со своими политиками конфиденциальности:</p>
+      <ul>
+        <li><strong>Google AdMob:</strong> Используется для показа рекламы и видеороликов за вознаграждение. Google может использовать рекламные идентификаторы устройства для персонализации объявлений. Вы можете отключить персонализацию в системных настройках своего телефона или ознакомиться с подробностями в <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Политике конфиденциальности Google</a>.</li>
+        <li><strong>RevenueCat:</strong> Используется для безопасного проведения и подтверждения покупок PRO-версии. Сервис обрабатывает только статусы транзакций и анонимные ID пользователей. Ни мы, ни RevenueCat не имеем доступа к вашим платежным реквизитам (банковским картам). Все платежи безопасно проводятся через Google Play Billing или Apple App Store. Ознакомьтесь с подробностями в <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent);">Политике конфиденциальности RevenueCat</a>.</li>
+      </ul>
+
+      <h2>3. Конфиденциальность детей</h2>
+      <p>Наше приложение не собирает личные данные детей. Поскольку сбор персональных данных в приложении полностью отсутствует, мы полностью соблюдаем требования COPPA (Закон о защите конфиденциальности детей в Интернете).</p>
+
+      <h2>4. Изменения в Политике конфиденциальности</h2>
+      <p>Мы можем периодически обновлять настоящую Политику конфиденциальности. Все изменения вступают в силу с момента их публикации на этой странице.</p>
+
+      <h2>5. Связь с нами</h2>
+      <p>Если у вас возникли вопросы или предложения относительно политики конфиденциальности, пишите нам:</p>
+      <p><strong>Email:</strong> skylight.apps.help@gmail.com</p>
+
+      <h2>6. Хранение и удаление данных</h2>
+      <p>Мы не храним ваши личные данные на наших серверах, поэтому у нас нет пользовательских данных для удаления. Вы можете удалить все локально сохраненные данные (ваши пресеты, миксы и настройки) в любой момент, просто удалив приложение или очистив кэш приложения в настройках устройства. Что касается данных, собираемых сторонними SDK (такими как AdMob и RevenueCat), вы можете запросить их удаление или отказаться от их сбора, изменив настройки рекламного идентификатора на своем устройстве.</p>
+    </div>
+
+    <!-- UKRAINIAN CONTENT -->
+    <div class="lang-content" data-lang="ua">
+      <h1>Політика конфіденційності</h1>
+      <p>Останнє оновлення: 3 липня 2026 р.</p>
+      <p>Ця Політика конфіденційності описує, як додаток SkyRest («ми», «наш» або «нас») обробляє та захищає ваші дані. Ми прагнемо забезпечити повну безпеку та конфіденційність вашої особистої інформації.</p>
+
+      <h2>1. Збір інформації</h2>
+      <p><strong>Персональні дані:</strong> SkyRest НЕ збирає, не зберігає та не передає третім особам будь-яку особисту інформацію (наприклад, ваше ім'я, адресу електронної пошти, номер телефону або ідентифікатори пристрою).</p>
+      <p><strong>Локальне сховище:</strong> Ми використовуємо локальну пам'ять вашого пристрою (AsyncStorage) виключно для збереження налаштувань програми, таких як обрана мова інтерфейсу, створені вами користувацькі мікси звуків та статус активації PRO. Ці дані зберігаються тільки на вашому телефоні та ніколи не передаються на зовнішні сервери.</p>
+
+      <h2>2. Сторонні сервіси</h2>
+      <p>Для забезпечення роботи рекламних оголошень та вбудованих покупок ми використовуємо перевірені сторонні інструменти (SDK), які можуть збирати анонімні технічні дані відповідно до своїх політик конфіденційності:</p>
+      <ul>
+        <li><strong>Google AdMob:</strong> Використовується для показу реклами та відеороликів за винагороду. Google може використовувати рекламні ідентифікатори пристрою для персоналізації оголошень. Ви можете відключити персоналізацію в системних налаштуваннях свого телефону або ознайомитися з деталями в <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Політиці конфіденційності Google</a>.</li>
+        <li><strong>RevenueCat:</strong> Використовується для безпечного проведення та підтвердження покупок PRO-версії. Сервіс обробляє лише статуси транзакцій та анонімна ID користувачів. Ні ми, ні RevenueCat не маємо доступу до ваших платіжних реквізитів (банківських карток). Усі платежі безпечно проводяться через Google Play Billing або Apple App Store. Ознайомтеся з деталями в <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent);">Політиці конфіденційності RevenueCat</a>.</li>
+      </ul>
+
+      <h2>3. Конфіденциальність дітей</h2>
+      <p>Наш додаток не збирає особисті дані дітей. Оскільки збір персональних даних у програмі повністю відсутній, ми повністю дотримуємося вимог COPPA (Закон про захист конфіденційності дітей в Інтернеті).</p>
+
+      <h2>4. Зміни в Політиці конфіденційності</h2>
+      <p>Ми можемо періодично оновлювати цю Політику конфіденційності. Усі зміни набирають чинності з моменту їх публікації на цій сторінці.</p>
+
+      <h2>5. Зв'язок з нами</h2>
+      <p>Якщо у вас виникли запитання або пропозиції щодо політики конфіденційності, пишіть нам:</p>
+      <p><strong>Email:</strong> skylight.apps.help@gmail.com</p>
+
+      <h2>6. Зберігання та вилучення даних</h2>
+      <p>Ми не зберігаємо ваші особисті дані на наших серверах, тому у нас немає користувацьких даних для видалення. Ви можете видалити всі локально збережені дані (ваши пресети, мікси та налаштування) в будь-який момент, просто видаливши додаток або очистивши кеш додатка в налаштуваннях пристрою. Що касается даних, які збираються сторонніми SDK (такими як AdMob та RevenueCat), ви можете запросити їх видалення або відмовитися від їх збору, змінивши налаштування рекламного ідентифікатора на своєму пристрої.</p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 SkyRest. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
